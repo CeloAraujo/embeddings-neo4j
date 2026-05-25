@@ -72,4 +72,3 @@ Contribuição
 - Abra issues ou envie PRs. Mantenha secrets fora do repositório.
 
 ---
-Commit inicial e README atualizado por automação.
