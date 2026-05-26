@@ -1,0 +1,4 @@
+#!/bin/sh
+# Post-commit hook that calls the Node changelog generator
+ROOT=$(git rev-parse --show-toplevel)
+node "$ROOT/scripts/changelog-postcommit.js" || exit 0

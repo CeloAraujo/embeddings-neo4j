@@ -141,3 +141,36 @@ Observações finais
 - A pasta `./respostas` guarda as respostas geradas (cada arquivo é timestampado).
 - Não comite tokens ou `.env`.
 
+Automatic changelogs on commit
+-----------------------------------
+
+Este repositório agora gera automaticamente um changelog para cada commit.
+
+- Hook rastreável: o hook de git está em `githooks/post-commit` (rastreado no repositório).
+- Script gerador: `scripts/changelog-postcommit.js` cria um arquivo em `changelogs/` com
+   data, autor, mensagem de commit, arquivos alterados e um `stat` do commit.
+
+Como funciona
+- Ao efetuar um commit, o hook chama o script Node que lê o último commit e grava
+   um arquivo Markdown em `changelogs/` com nome no formato `YYYY-MM-DDTHH-MM-SS-sss_<sha>.md`.
+
+Como ativar localmente
+- Este repositório usa `githooks/` como diretório de hooks. Para ativá-lo localmente, execute:
+
+```bash
+cd embeddings-neo4j
+git config core.hooksPath githooks
+chmod +x githooks/post-commit
+```
+
+Como desativar
+- Para desativar (não gerar changelogs em commits):
+
+```bash
+git config --unset core.hooksPath
+```
+
+Privacidade
+- Os arquivos em `changelogs/` contêm metadados do commit e não devem incluir segredos.
+   Se preferir não registrar determinadas informações, ajuste `scripts/changelog-postcommit.js`.
+
