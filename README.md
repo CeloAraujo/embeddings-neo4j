@@ -148,6 +148,7 @@ Este repositório agora gera automaticamente um changelog para cada commit.
 
 - Hook rastreável: o hook de git está em `githooks/post-commit` (rastreado no repositório).
 - Script gerador: `scripts/changelog-postcommit.js` cria um arquivo em `changelogs/` com
+ - Script gerador: `scripts/changelog-postcommit.cjs` cria um arquivo em `changelogs/` com
    data, autor, mensagem de commit, arquivos alterados e um `stat` do commit.
 
 Como funciona
