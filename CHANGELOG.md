@@ -2,6 +2,70 @@
 
 This file aggregates individual changelog entries generated on commits (folder changelogs/).
 
+## 2026-05-26T15-05-00-926Z_2f4e6af.md
+
+**Date:** 2026-05-26 12:05:00 -0300
+
+**Author:** 
+
+**Message:**
+
+chore(release): add changelog aggregation script and preversion hook
+
+**Files changed:**
+
+- package.json
+
+**Stat:**
+
+```
+commit 2f4e6afdcc2c19bd68d6a450684dbef34a990964
+Author: marcelo.araujo <marcelo.araujo@memora.com.br>
+Date:   Tue May 26 12:05:00 2026 -0300
+
+    chore(release): add changelog aggregation script and preversion hook
+
+ package.json | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+```
+
+---
+
+## 2026-05-26T15-03-20-353Z_5d7b63d.md
+
+**Date:** 2026-05-26 12:03:19 -0300
+
+**Author:** 
+
+**Message:**
+
+feat(changelog): aggregate changelogs into CHANGELOG.md
+
+Gera um CHANGELOG.md consolidado a partir dos arquivos em changelogs/ para facilitar versão interna e histórico.
+
+**Files changed:**
+
+- CHANGELOG.md
+- scripts/aggregate-changelogs.cjs
+
+**Stat:**
+
+```
+commit 5d7b63da4ecffeab4f2f017ec37922729074e09a
+Author: marcelo.araujo <marcelo.araujo@memora.com.br>
+Date:   Tue May 26 12:03:19 2026 -0300
+
+    feat(changelog): aggregate changelogs into CHANGELOG.md
+    
+    Gera um CHANGELOG.md consolidado a partir dos arquivos em changelogs/ para facilitar versão interna e histórico.
+
+ CHANGELOG.md                     | 72 ++++++++++++++++++++++++++++++++++++++++
+ scripts/aggregate-changelogs.cjs | 36 ++++++++++++++++++++
+ 2 files changed, 108 insertions(+)
+```
+
+---
+
 ## 2026-05-26T14-58-21-071Z_ab35419.md
 
 **Date:** 2026-05-26 11:58:20 -0300

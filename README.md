@@ -147,13 +147,12 @@ Automatic changelogs on commit
 Este repositório agora gera automaticamente um changelog para cada commit.
 
 - Hook rastreável: o hook de git está em `githooks/post-commit` (rastreado no repositório).
-- Script gerador: `scripts/changelog-postcommit.js` cria um arquivo em `changelogs/` com
- - Script gerador: `scripts/changelog-postcommit.cjs` cria um arquivo em `changelogs/` com
-   data, autor, mensagem de commit, arquivos alterados e um `stat` do commit.
+- Script gerador: `scripts/changelog-postcommit.cjs` cria um arquivo em `changelogs/` com
+  data, autor, mensagem de commit, arquivos alterados e um `stat` do commit.
 
 Como funciona
 - Ao efetuar um commit, o hook chama o script Node que lê o último commit e grava
-   um arquivo Markdown em `changelogs/` com nome no formato `YYYY-MM-DDTHH-MM-SS-sss_<sha>.md`.
+  um arquivo Markdown em `changelogs/` com nome no formato `YYYY-MM-DDTHH-MM-SS-sss_<sha>.md`.
 
 Como ativar localmente
 - Este repositório usa `githooks/` como diretório de hooks. Para ativá-lo localmente, execute:
@@ -171,7 +170,14 @@ Como desativar
 git config --unset core.hooksPath
 ```
 
+Automação local e CI
+-----------------------------------
+
+- `npm run changelog:aggregate` consolida todos os arquivos de `changelogs/` em `CHANGELOG.md`.
+- `npm version <patch|minor|major>` roda automaticamente o script `preversion` e atualiza `CHANGELOG.md` antes do bump.
+- Um workflow GitHub Actions foi adicionado em `.github/workflows/changelog-generator.yml` para gerar e comitar `CHANGELOG.md` automaticamente na branch `main`.
+
 Privacidade
 - Os arquivos em `changelogs/` contêm metadados do commit e não devem incluir segredos.
-   Se preferir não registrar determinadas informações, ajuste `scripts/changelog-postcommit.js`.
+  Se preferir não registrar determinadas informações, ajuste `scripts/changelog-postcommit.cjs`.
 
