@@ -176,6 +176,7 @@ Automação local e CI
 - `npm run changelog:aggregate` consolida todos os arquivos de `changelogs/` em `CHANGELOG.md`.
 - `npm version <patch|minor|major>` roda automaticamente o script `preversion` e atualiza `CHANGELOG.md` antes do bump.
 - Um workflow GitHub Actions foi adicionado em `.github/workflows/changelog-generator.yml` para gerar e comitar `CHANGELOG.md` automaticamente na branch `main`.
+- O workflow não é disparado por commits que alteram apenas `CHANGELOG.md` ou arquivos em `changelogs/`, evitando um ciclo infinito de commits de changelog.
 
 Privacidade
 - Os arquivos em `changelogs/` contêm metadados do commit e não devem incluir segredos.
