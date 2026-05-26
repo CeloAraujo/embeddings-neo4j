@@ -2,6 +2,92 @@
 
 This file aggregates individual changelog entries generated on commits (folder changelogs/).
 
+## 2026-05-26T15-08-00-090Z_8a6efdb.md
+
+**Date:** 2026-05-26 12:07:59 -0300
+
+**Author:** 
+
+**Message:**
+
+chore(rag): add final post-commit changelog entry and remove legacy JS hook
+
+**Files changed:**
+
+- changelogs/2026-05-26T15-07-30-507Z_8ca4953.md
+- scripts/changelog-postcommit.js
+
+**Stat:**
+
+```
+commit 8a6efdb8cd98527e8a0c0c2ae920af1576bfe836
+Author: marcelo.araujo <marcelo.araujo@memora.com.br>
+Date:   Tue May 26 12:07:59 2026 -0300
+
+    chore(rag): add final post-commit changelog entry and remove legacy JS hook
+
+ changelogs/2026-05-26T15-07-30-507Z_8ca4953.md | 52 ++++++++++++++++++++++++++
+ scripts/changelog-postcommit.js                | 52 --------------------------
+ 2 files changed, 52 insertions(+), 52 deletions(-)
+```
+
+---
+
+## 2026-05-26T15-07-30-507Z_8ca4953.md
+
+**Date:** 2026-05-26 12:07:29 -0300
+
+**Author:** 
+
+**Message:**
+
+feat(rag): finalize changelog automation pipeline
+
+Adiciona GitHub Actions para geração e commit automático de CHANGELOG.md, atualiza README e finaliza a automação local de changelog/commit.
+
+**Files changed:**
+
+- .github/workflows/changelog-generator.yml
+- CHANGELOG.md
+- README.md
+- changelogs/2026-05-26T14-55-45-570Z_67de33d.md
+- changelogs/2026-05-26T14-58-21-071Z_ab35419.md
+- changelogs/2026-05-26T15-03-20-353Z_5d7b63d.md
+- changelogs/2026-05-26T15-05-00-926Z_2f4e6af.md
+- prompts/answerPrompt.json
+- prompts/template.txt
+- src/ai.ts
+- src/config.ts
+- src/index.ts
+
+**Stat:**
+
+```
+commit 8ca495375609ec24a20cd3af2c19f9b87ae53481
+Author: marcelo.araujo <marcelo.araujo@memora.com.br>
+Date:   Tue May 26 12:07:29 2026 -0300
+
+    feat(rag): finalize changelog automation pipeline
+    
+    Adiciona GitHub Actions para geração e commit automático de CHANGELOG.md, atualiza README e finaliza a automação local de changelog/commit.
+
+ .github/workflows/changelog-generator.yml      |  33 ++++++++
+ CHANGELOG.md                                   |  64 ++++++++++++++++
+ README.md                                      |  16 ++--
+ changelogs/2026-05-26T14-55-45-570Z_67de33d.md |  30 ++++++++
+ changelogs/2026-05-26T14-58-21-071Z_ab35419.md |  32 ++++++++
+ changelogs/2026-05-26T15-03-20-353Z_5d7b63d.md |  32 ++++++++
+ changelogs/2026-05-26T15-05-00-926Z_2f4e6af.md |  26 +++++++
+ prompts/answerPrompt.json                      |  38 ++++++++++
+ prompts/template.txt                           |  19 +++++
+ src/ai.ts                                      | 101 +++++++++++++++++++++++++
+ src/config.ts                                  |  13 ++++
+ src/index.ts                                   |  48 +++++++++---
+ 12 files changed, 438 insertions(+), 14 deletions(-)
+```
+
+---
+
 ## 2026-05-26T15-05-00-926Z_2f4e6af.md
 
 **Date:** 2026-05-26 12:05:00 -0300
