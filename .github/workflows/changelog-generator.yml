@@ -1,5 +1,8 @@
 name: Changelog generation
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
